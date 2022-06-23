@@ -1,0 +1,89 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+.fuente{
+		font-weight:map-get($fuente1,regular);
+}
+@each $k,$v in $fuente1{
+	.font-#{$k}{
+		font-weight:$v;
+
+	}
+
+}
+
+.header{
+	blackground-color:$colorblue;
+
+}
+
+
+.btn{
+	width:200px;
+	height:50px;
+	blackground-color:white;
+	text-align:center;
+	color:black;
+	border-radius:20px;
+	border:1px solid black;
+
+}
+.btn--aceptar{
+	@extend .btn;
+	blackground:green;
+	color:green;
+}
+.btn--cancelar{
+	@extend .btn;
+	blackground:red;
+	color:red;
+}
+
+@mixin stilo($color, $width) {
+  border: {
+    color: $color;
+    width: $width;
+  }
+}
+
+.buton1{ @include stilo(green, 20px); }
+
+#header{
+  background:#D7DBDD;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+	
+#navBar{
+	blackground-color:$colorgreen;
+	padding-top: 80px;
+}
+
+.contactoTitle {
+		text-align:center;
+		font-weight:bold;
+		font-size:40px;
+}
+.listaProd{
+		text-align:center;
+		font-weight:bold;
+		font-size:40px;
+
+}
+.contacto1{
+			text-align:center;
+			font-weight:bold;
+			font-size:40px;
+
+}
+
+.container123{
+	display:flex;
+	justify-content: space-around;
+	padding: 20px;
+	margin: 20px;
+
+}
+
